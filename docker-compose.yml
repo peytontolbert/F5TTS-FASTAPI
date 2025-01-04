@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./weights:/app/weights:ro
+      - ./voice_profiles:/app/voice_profiles
+      - ./f5_tts_cache:/root/.cache/f5_tts
+    environment:
+      - MODEL_DIR=weights
+      - VOICE_PROFILES_DIR=voice_profiles
+      - SECRET_KEY=your-secret-key-here
+      - PORT=8081
+      - PYTHONPATH=/app
+      - PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:32
+      - CUDA_VISIBLE_DEVICES=0
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    command: python -m app.start 

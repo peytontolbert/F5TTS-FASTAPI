@@ -1,0 +1,8 @@
+.cursorrules
+*.log
+*.wav
+voice_profiles/
+app/voice_profiles/
+*.txt
+*.pt
+__pycache__/
