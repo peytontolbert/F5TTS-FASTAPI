@@ -6,3 +6,4 @@ app/voice_profiles/
 *.txt
 *.pt
 __pycache__/
+PLAN.md
