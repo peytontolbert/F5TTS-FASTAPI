@@ -43,8 +43,8 @@ pip install -r requirements.txt
 ```
 
 
-2. Place model files:
-   - Put `final_finetuned_model.pt` in `weights/`
+2. Download https://huggingface.co/SWivid/F5-TTS & Place model files:
+   - Put `model_1200000.pt` in `weights/`
    - Put `F5TTS_Base_vocab.txt` in `weights/`
 
 3. Set up voice profiles:
