@@ -1,0 +1,17 @@
+numpy==1.24.3
+# CUDA-enabled PyTorch
+--extra-index-url https://download.pytorch.org/whl/cu118
+torch==2.1.0+cu118
+torchaudio==2.1.0+cu118
+transformers==4.36.2
+fastapi==0.109.0
+uvicorn==0.27.0
+python-jose==3.3.0
+python-multipart==0.0.6
+pydantic==1.10.9
+python-dotenv==1.0.0
+soundfile==0.12.1
+pydub==0.25.1
+einx==0.3.0
+git+https://github.com/SWivid/F5-TTS.git
+sounddevice==0.4.6
